@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Masingita Divine Nghonyama | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #ffe6f0; /* LIGHT PINK BACKGROUND */
+  color: #2d2d2d;
+}
+
+/* TOP SECTION */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffb6c1, #ffd6e7);
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  font-size: 32px;
+}
+
+p {
+  margin: 5px;
+}
+
+/* NAV CARDS */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.nav button {
+  background: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.nav button:hover {
+  transform: translateY(-3px);
+  background: #ffd1dc;
+}
+
+/* CONTENT BOX */
+.section {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+h2 {
+  border-bottom: 2px solid #ffb6c1;
+  padding-bottom: 8px;
+}
+
+/* LIST */
+ul {
+  line-height: 1.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <!-- PROFILE IMAGE -->
+  <img src="YOUR_IMAGE.jpg" alt="Profile Photo" class="profile-img">
+
+  <h1>Masingita Divine Nghonyama</h1>
+  <p>Customer Success | Account Management | Operations Specialist</p>
+  <p>📍 Johannesburg | 📞 +27 69 245 0176 | 📧 nghonyamamasingita@gmail.com</p>
+
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <button onclick="show('about')">About</button>
+    <button onclick="show('experience')">Experience</button>
+    <button onclick="show('education')">Education</button>
+    <button onclick="show('skills')">Skills</button>
+    <button onclick="show('tools')">Tools</button>
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+<div id="about" class="section active">
+<h2>Professional Summary</h2>
+<p>
+Client-focused Customer Success and Support Specialist with 4+ years of experience in high-volume, SLA-driven environments across phone, chat, and email support. Skilled in CRM management, client onboarding, escalation handling, and cross-functional coordination.
+<br><br>
+Currently advancing technical expertise through Computer Science studies and CompTIA certifications.
+</p>
+</div>
+
+<!-- EXPERIENCE -->
+<div id="experience" class="section">
+<h2>Professional Experience</h2>
+
+<ul>
+<li><b>Customer Success Specialist – SupportYourApp</b> (2024–2026)<br>
+Managed high-volume client communication, CRM updates, SLA compliance, and issue resolution.</li><br>
+
+<li><b>Technical Support Agent – Concentrix (Verizon)</b> (2023–2024)<br>
+Handled inbound/outbound calls, troubleshooting, onboarding support, and CRM data handling.</li><br>
+
+<li><b>Operations Administrator – MultiChoice Group</b> (2021–2023)<br>
+Managed customer data, inter-department coordination, onboarding, and workflow support.</li>
+</ul>
+
+</div>
+
+<!-- EDUCATION -->
+<div id="education" class="section">
+<h2>Education</h2>
+
+<ul>
+<li>BSc Computer Science & Applied Mathematics – UNISA (In Progress, 2026)</li>
+<li>Higher Certificate in Software Development – STADIO (2026)</li>
+<li>Electrical Engineering – Damelin (2021–2023)</li>
+</ul>
+
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section">
+<h2>Core Skills</h2>
+
+<ul>
+<li>Customer Communication (Phone, Email, Chat)</li>
+<li>CRM & Data Management</li>
+<li>Account & Client Relationship Management</li>
+<li>Ticketing & SLA Handling</li>
+<li>Escalation Management</li>
+<li>Problem Solving & Troubleshooting</li>
+</ul>
+
+</div>
+
+<!-- TOOLS -->
+<div id="tools" class="section">
+<h2>Technical Tools</h2>
+
+<ul>
+<li>CRM Systems (GoHighLevel, ticketing platforms)</li>
+<li>Google Workspace</li>
+<li>Microsoft Office</li>
+<li>Remote Support Tools</li>
+<li>Data Tracking Systems</li>
+</ul>
+
+</div>
+
+<script>
+function show(id){
+  let sections = document.querySelectorAll('.section');
+  sections.forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
